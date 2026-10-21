@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with VoltX Electronics. Visit our store, call us, or send a message. Located at MG Road, Pune.">
+    <title>Contact Us | VoltX Electronics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Volt<span class="logo-accent">X</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="products.html" class="mobile-link">Products</a>
+        <a href="contact.html" class="mobile-link active">Contact</a>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="section-container">
+            <div class="page-hero-content">
+                <span class="section-tag">Get In Touch</span>
+                <h1 class="section-title">Contact <span class="gradient-text">Us</span></h1>
+                <p class="section-subtitle">Have a question about product availability? We're here to help!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="section-container">
+            <div class="contact-grid">
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <div class="info-card" data-tilt>
+                        <div class="info-icon">📍</div>
+                        <h3>Visit Our Store</h3>
+                        <p>VoltX Electronics</p>
+                        <p>123, MG Road, Camp Area</p>
+                        <p>Pune, Maharashtra 411001</p>
+                        <a href="#map" class="info-link">View on Map →</a>
+                    </div>
+                    <div class="info-card" data-tilt>
+                        <div class="info-icon">📞</div>
+                        <h3>Call Us</h3>
+                        <p>Sales: +91 98765 43210</p>
+                        <p>Support: +91 98765 43211</p>
+                        <p>Mon-Sat: 10AM - 9PM</p>
+                        <a href="tel:+919876543210" class="info-link">Call Now →</a>
+                    </div>
+                    <div class="info-card" data-tilt>
+                        <div class="info-icon">✉️</div>
+                        <h3>Email Us</h3>
+                        <p>General: info@voltx.com</p>
+                        <p>Support: help@voltx.com</p>
+                        <p>Response within 24hrs</p>
+                        <a href="mailto:info@voltx.com" class="info-link">Send Email →</a>
+                    </div>
+                    <div class="info-card" data-tilt>
+                        <div class="info-icon">🕐</div>
+                        <h3>Store Hours</h3>
+                        <div class="hours-list">
+                            <div class="hours-row">
+                                <span>Monday - Friday</span>
+                                <span class="hours-time">10:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="hours-row">
+                                <span>Saturday</span>
+                                <span class="hours-time">10:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="hours-row">
+                                <span>Sunday</span>
+                                <span class="hours-time">11:00 AM - 7:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="store-status" id="storeStatus"></div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="form-card">
+                        <h2>Send Us a Message</h2>
+                        <p class="form-subtitle">Ask about product availability, pricing, or anything else!</p>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="nameInput">Full Name</label>
+                                <input type="text" id="nameInput" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="emailInput">Email</label>
+                                    <input type="email" id="emailInput" placeholder="john@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneInput">Phone</label>
+                                    <input type="tel" id="phoneInput" placeholder="+91 98765 43210">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subjectSelect">Subject</label>
+                                <select id="subjectSelect" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="availability">Product Availability</option>
+                                    <option value="pricing">Pricing Inquiry</option>
+                                    <option value="warranty">Warranty Information</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="messageInput">Message</label>
+                                <textarea id="messageInput" rows="5" placeholder="Tell us what you need..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full" id="submitFormBtn">
+                                <span>Send Message</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="form-success" id="formSuccess" style="display:none;">
+                            <div class="success-icon">✅</div>
+                            <h3>Message Sent!</h3>
+                            <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="section-container">
+            <div class="map-wrapper">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <div class="map-pin">📍</div>
+                        <h3>VoltX Electronics Store</h3>
+                        <p>123, MG Road, Camp Area, Pune 411001</p>
+                        <div class="map-grid-visual">
+                            <div class="map-road map-road-h"></div>
+                            <div class="map-road map-road-v"></div>
+                            <div class="map-building mb1"></div>
+                            <div class="map-building mb2"></div>
+                            <div class="map-building mb3"></div>
+                            <div class="map-building mb4"></div>
+                            <div class="map-building mb5"></div>
+                            <div class="map-store-marker">
+                                <div class="pulse-ring"></div>
+                                <span>⚡</span>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=MG+Road+Pune" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="openMapsBtn">
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" id="faq1">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How accurate is the product availability shown on the website?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our inventory is updated every 30 minutes during business hours. However, fast-selling items may sell out between updates. We recommend calling ahead for high-demand products.</p>
+                    </div>
+                </div>
+                <div class="faq-item" id="faq2">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I reserve a product before visiting the store?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Call us or send a message through the contact form. We can hold a product for up to 24 hours while you arrange to visit our store.</p>
+                    </div>
+                </div>
+                <div class="faq-item" id="faq3">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do you offer home delivery?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Currently, we are a walk-in store. However, for orders above ₹25,000, we offer free delivery within Pune city limits. Contact us for details.</p>
+                    </div>
+                </div>
+                <div class="faq-item" id="faq4">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept Cash, UPI (GPay, PhonePe, Paytm), Credit/Debit Cards, Net Banking, and EMI options on select products. We also support No-Cost EMI on select credit cards.</p>
+                    </div>
+                </div>
+                <div class="faq-item" id="faq5">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is your return/exchange policy?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a 7-day replacement policy for manufacturing defects. Exchanges are subject to product availability. All returns must include original packaging and accessories.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Volt<span class="logo-accent">X</span></span>
+                    </a>
+                    <p>Your one-stop destination for premium electronics. Check availability, visit the store, and get the best deals.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <a href="products.html">Smartphones</a>
+                    <a href="products.html">Laptops</a>
+                    <a href="products.html">Audio</a>
+                    <a href="products.html">Gaming</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Store Hours</h4>
+                    <p>Mon - Sat: 10AM - 9PM</p>
+                    <p>Sunday: 11AM - 7PM</p>
+                    <p>📍 MG Road, Pune, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VoltX Electronics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

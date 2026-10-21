@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VoltX Electronics - Premium electronic shop with real-time product availability. Check if your favorite gadgets are in stock.">
+    <title>VoltX Electronics | Premium Gadgets &amp; Gear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Volt<span class="logo-accent">X</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link active">Home</a>
+        <a href="products.html" class="mobile-link">Products</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🔥 New Arrivals Just Dropped</div>
+            <h1 class="hero-title">
+                The Future of
+                <span class="gradient-text">Electronics</span>
+                is Here
+            </h1>
+            <p class="hero-subtitle">
+                Discover cutting-edge gadgets, premium audio gear, and next-gen tech. 
+                Check real-time availability before you visit.
+            </p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary" id="browseProductsBtn">
+                    <span>Browse Products</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="contact.html" class="btn btn-secondary" id="contactUsBtn">
+                    <span>Contact Us</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="500">0</span>+
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>+
+                    <span class="stat-label">Brands</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="10000">0</span>+
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-3d-scene" id="hero3d">
+            <div class="floating-cube" id="floatingCube">
+                <div class="cube-face cube-front">⚡</div>
+                <div class="cube-face cube-back">🎧</div>
+                <div class="cube-face cube-right">📱</div>
+                <div class="cube-face cube-left">💻</div>
+                <div class="cube-face cube-top">🎮</div>
+                <div class="cube-face cube-bottom">📷</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories" id="categories">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Categories</span>
+                <h2 class="section-title">Explore Our <span class="gradient-text">Collection</span></h2>
+                <p class="section-subtitle">From smartphones to gaming rigs — we've got it all.</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card" data-tilt>
+                    <div class="category-icon">📱</div>
+                    <h3>Smartphones</h3>
+                    <p>Latest flagships & budget picks</p>
+                    <div class="category-count">85+ items</div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="category-card" data-tilt>
+                    <div class="category-icon">💻</div>
+                    <h3>Laptops</h3>
+                    <p>Ultrabooks, gaming & workstations</p>
+                    <div class="category-count">60+ items</div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="category-card" data-tilt>
+                    <div class="category-icon">🎧</div>
+                    <h3>Audio</h3>
+                    <p>Headphones, speakers & earbuds</p>
+                    <div class="category-count">120+ items</div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="category-card" data-tilt>
+                    <div class="category-icon">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>Consoles, controllers & accessories</p>
+                    <div class="category-count">90+ items</div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="category-card" data-tilt>
+                    <div class="category-icon">📷</div>
+                    <h3>Cameras</h3>
+                    <p>DSLRs, mirrorless & action cams</p>
+                    <div class="category-count">45+ items</div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="category-card" data-tilt>
+                    <div class="category-icon">⌚</div>
+                    <h3>Wearables</h3>
+                    <p>Smartwatches & fitness trackers</p>
+                    <div class="category-count">70+ items</div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured" id="featured">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Trending Now</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Products</span></h2>
+                <p class="section-subtitle">Hot picks with real-time stock availability</p>
+            </div>
+            <div class="products-showcase">
+                <div class="product-card-3d" data-tilt>
+                    <div class="product-badge available">In Stock</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-emoji">📱</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 16 Pro Max</h3>
+                        <p class="product-brand">Apple</p>
+                        <div class="product-price">₹1,44,900</div>
+                        <div class="availability-bar">
+                            <div class="bar-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="stock-text">Limited Stock</span>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+                <div class="product-card-3d" data-tilt>
+                    <div class="product-badge available">In Stock</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-emoji">💻</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>MacBook Air M3</h3>
+                        <p class="product-brand">Apple</p>
+                        <div class="product-price">₹1,14,900</div>
+                        <div class="availability-bar">
+                            <div class="bar-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="stock-text">Available</span>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+                <div class="product-card-3d" data-tilt>
+                    <div class="product-badge out-of-stock">Out of Stock</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-emoji">🎧</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sony WH-1000XM5</h3>
+                        <p class="product-brand">Sony</p>
+                        <div class="product-price">₹29,990</div>
+                        <div class="availability-bar">
+                            <div class="bar-fill out" style="width: 0%"></div>
+                        </div>
+                        <span class="stock-text out">Currently Unavailable</span>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+                <div class="product-card-3d" data-tilt>
+                    <div class="product-badge available">In Stock</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-emoji">🎮</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>PlayStation 5 Slim</h3>
+                        <p class="product-brand">Sony</p>
+                        <div class="product-price">₹49,990</div>
+                        <div class="availability-bar">
+                            <div class="bar-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="stock-text">Few Left</span>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+            <div class="cta-center">
+                <a href="products.html" class="btn btn-primary btn-large" id="viewAllProductsBtn">
+                    View All Products
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="whyUs">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Why VoltX?</span>
+                <h2 class="section-title">Why Customers <span class="gradient-text">Love Us</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🔍</div>
+                    <h3>Real-Time Stock</h3>
+                    <p>Know exactly what's available before you visit our store. No wasted trips.</p>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">✅</div>
+                    <h3>Genuine Products</h3>
+                    <p>100% authentic products with manufacturer warranty. No fakes, ever.</p>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with price-match guarantee on all major brands.</p>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Extended Warranty</h3>
+                    <p>Optional extended coverage plans for complete peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Volt<span class="logo-accent">X</span></span>
+                    </a>
+                    <p>Your one-stop destination for premium electronics. Check availability, visit the store, and get the best deals.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <a href="products.html">Smartphones</a>
+                    <a href="products.html">Laptops</a>
+                    <a href="products.html">Audio</a>
+                    <a href="products.html">Gaming</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Store Hours</h4>
+                    <p>Mon - Sat: 10AM - 9PM</p>
+                    <p>Sunday: 11AM - 7PM</p>
+                    <p>📍 MG Road, Pune, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VoltX Electronics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
